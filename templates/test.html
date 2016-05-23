@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<table class="table table-bordered">
+			<tr>
+                             <th>number</th>
+                             <th>fizz</th>
+                             <th>buzz</th>
+                        </tr>
+                        {% for i in range(1,101) %}
+                        <tr>
+                         <td>{{i}}</td>
+
+                         
+                         {% if i%15==0 %}
+                         <td><span class="glyphicon glyphicon-ok" style="color:green"></span></td>
+                         <td><span class="glyphicon glyphicon-ok" style="color:green"></span></td>
+                         
+                         
+                         {% elif  i%5==0 %}      
+                         <td></td>
+                         <td><span class="glyphicon glyphicon-ok"></span></td>
+                        
+
+                          {% elif i%3==0 %}
+                         <td><span class="glyphicon glyphicon-ok"></span></td>
+                         <td></td>
+                         
+                         {% endif %}
+ 
+                          </tr>
+                        {% endfor %}
+                       
+                </table>
+
+
+	</body>
+</html>
